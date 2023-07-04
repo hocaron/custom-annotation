@@ -5,9 +5,9 @@ import lombok.Setter;
 @Setter
 public class MaskingTestField {
 
-	@MaskingRequired(type = MaskingType.ID)
+	@Masked(type = MaskingType.ID)
 	private String id;
 
-	@MaskingRequired(type = MaskingType.MOBILE)
+	@Masked(type = MaskingType.MOBILE)
 	private String mobile;
 }

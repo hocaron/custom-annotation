@@ -34,10 +34,10 @@ public class MaskingPropertySerializer extends StdSerializer<String> implements 
 	@Override
 	public JsonSerializer<String> createContextual(SerializerProvider serializerProvider, BeanProperty beanProperty) {
 		MaskingType maskingTypeValue = null;
-		MaskingRequired maskingAnnotation = null;
+		Masked maskingAnnotation = null;
 
 		if (beanProperty != null) {
-			maskingAnnotation = beanProperty.getAnnotation(MaskingRequired.class);
+			maskingAnnotation = beanProperty.getAnnotation(Masked.class);
 		}
 		if (maskingAnnotation != null) {
 			maskingTypeValue = maskingAnnotation.type();

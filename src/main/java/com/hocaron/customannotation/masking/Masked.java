@@ -12,6 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @JacksonAnnotationsInside
 @JsonSerialize(using = MaskingPropertySerializer.class)
-public @interface MaskingRequired {
+public @interface Masked {
 	MaskingType type();
 }
